@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e1116">
+<meta name="robots" content="noindex">
+<title>Unduh FinTrack</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230e1116'/%3E%3Cpath d='M20 72 L40 50 L55 60 L80 30' fill='none' stroke='%2300e676' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e1116;
+    --surface: #161b22;
+    --line: #2a323d;
+    --text: #f5f7fa;
+    --muted: #a0a9b8;
+    --green: #00e676;
+    --green-press: #00c964;
+    --indigo: #3f51b5;
+    --font: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    background:
+      radial-gradient(60% 45% at 50% 0%, rgba(63, 81, 181, .28), transparent 70%),
+      radial-gradient(40% 30% at 50% 100%, rgba(0, 230, 118, .10), transparent 70%),
+      var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    -webkit-text-size-adjust: 100%;
+    display: grid;
+    place-items: center;
+    padding: max(24px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom));
+  }
+  main {
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+  }
+  .logo {
+    width: 104px; height: 104px;
+    border-radius: 28px;
+    display: block;
+    margin: 0 auto 28px;
+    box-shadow: 0 18px 50px -12px rgba(63, 81, 181, .55), 0 0 0 1px var(--line);
+  }
+  h1 {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    line-height: 1.15;
+  }
+  .sub {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .btn {
+    margin-top: 36px;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%;
+    height: 56px;
+    border-radius: 16px;
+    background: var(--green);
+    color: #04140b;
+    font: inherit; font-size: 16px; font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 30px -10px rgba(0, 230, 118, .6);
+    transition: background .15s ease, transform .1s ease;
+  }
+  .btn:hover { background: #33ee93; }
+  .btn:active { background: var(--green-press); transform: scale(.985); }
+  .btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  .btn svg { width: 22px; height: 22px; flex: none; }
+  .meta {
+    margin-top: 16px;
+    min-height: 20px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+  <svg class="logo" viewBox="0 0 108 108" role="img" aria-label="Logo FinTrack">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#1b2230"/>
+        <stop offset="1" stop-color="#0e1116"/>
+      </linearGradient>
+    </defs>
+    <rect width="108" height="108" fill="url(#bg)"/>
+    <path fill="#00E676" d="M34,68 L46,56 L58,62 L74,40 L74,48 L78,48 L78,34 L64,34 L64,38 L71.2,38 L57.8,56.4 L46.2,50.6 L31,65 L34,68 Z"/>
+    <path fill="#5C6BC0" d="M30,72 h10 v8 h-10 z"/>
+    <path fill="#5C6BC0" d="M46,64 h10 v16 h-10 z"/>
+    <path fill="#5C6BC0" d="M62,54 h10 v26 h-10 z"/>
+  </svg>
+
+  <h1>FinTrack</h1>
+  <p class="sub">Unduh aplikasi untuk Android.</p>
+
+  <a class="btn" id="download" href="FinTrack.apk" download="FinTrack.apk">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 4v11"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/>
+    </svg>
+    Unduh FinTrack.apk
+  </a>
+  <p class="meta" id="meta" role="status" aria-live="polite"></p>
+</main>
+
+<script>
+(function () {
+  var APK = "FinTrack.apk";
+  var meta = document.getElementById("meta");
+  var started = false;
+
+  function formatSize(bytes) {
+    if (!bytes || isNaN(bytes)) return "";
+    var mb = bytes / 1048576;
+    return mb.toFixed(mb >= 10 ? 0 : 1).replace(".", ",") + " MB";
+  }
+
+  function startDownload() {
+    if (started) return;
+    started = true;
+    var a = document.createElement("a");
+    a.href = APK;
+    a.download = APK;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
+
+  // Tampilkan ukuran file bila tersedia, lalu mulai unduhan otomatis.
+  fetch(APK, { method: "HEAD", cache: "no-store" })
+    .then(function (res) {
+      var type = res.headers.get("content-type") || "";
+      if (!res.ok || type.indexOf("text/html") !== -1) throw new Error("missing");
+      var size = formatSize(parseInt(res.headers.get("content-length"), 10));
+      meta.textContent = size ? "Mengunduh · " + size : "Mengunduh…";
+      setTimeout(startDownload, 600);
+    })
+    .catch(function () {
+      meta.textContent = "File belum tersedia di server.";
+    });
+
+  document.getElementById("download").addEventListener("click", function () {
+    started = true;
+  });
+})();
+</script>
+</body>
+</html>

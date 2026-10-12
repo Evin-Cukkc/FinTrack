@@ -1,0 +1,16 @@
+# Android / Gradle
+.gradle/
+build/
+app/build/
+local.properties
+.navigation/
+.idea/
+*.iml
+.DS_Store
+
+# Vercel & rahasia (jangan pernah di-commit / di-zip)
+.vercel
+.env*
+
+.vscode/
+.vercel

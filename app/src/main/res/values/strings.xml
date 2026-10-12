@@ -1,0 +1,102 @@
+<resources>
+
+    <string name="app_name">FinTrack</string>
+
+    <!-- Beranda -->
+    <string name="total_balance">Total Saldo</string>
+    <string name="search_transaction">Cari transaksi…</string>
+    <string name="recent_transactions">Transaksi Terbaru</string>
+    <string name="empty_transactions">Belum ada transaksi.\nKetuk tombol + untuk menambahkan.</string>
+    <string name="empty_search">Tidak ada transaksi yang cocok.</string>
+    <string name="greeting_morning">Selamat pagi</string>
+    <string name="greeting_afternoon">Selamat siang</string>
+    <string name="greeting_evening">Selamat sore</string>
+    <string name="greeting_night">Selamat malam</string>
+
+    <!-- Filter -->
+    <string name="all">Semua</string>
+    <string name="income">Pemasukan</string>
+    <string name="expense">Pengeluaran</string>
+    <string name="bill">Tagihan</string>
+
+    <!-- Transaksi -->
+    <string name="add_transaction">Tambah Transaksi</string>
+    <string name="edit_transaction">Edit Transaksi</string>
+    <string name="delete_transaction">Hapus Transaksi</string>
+    <string name="delete_confirm">Hapus \"%1$s\"? Tindakan ini tidak bisa dibatalkan.</string>
+    <string name="transaction_name">Nama transaksi</string>
+    <string name="category">Kategori</string>
+    <string name="amount">Nominal (Rp)</string>
+    <string name="type">Tipe</string>
+    <string name="status">Status</string>
+    <string name="msg_fill_all">Harap isi semua kolom</string>
+    <string name="msg_invalid_amount">Nominal tidak valid</string>
+    <string name="msg_added">Transaksi ditambahkan</string>
+    <string name="msg_updated">Transaksi diperbarui</string>
+    <string name="msg_deleted">Transaksi dihapus</string>
+
+    <!-- Tombol -->
+    <string name="save">Simpan</string>
+    <string name="add">Tambah</string>
+    <string name="cancel">Batal</string>
+    <string name="delete">Hapus</string>
+
+    <!-- Status -->
+    <string name="status_done">SELESAI</string>
+    <string name="status_pending">PENDING</string>
+    <string name="status_paid">DIBAYAR</string>
+
+    <!-- Navigasi bawah -->
+    <string name="home">Beranda</string>
+    <string name="analytics">Analitik</string>
+    <string name="budget">Anggaran</string>
+    <string name="profile">Profil</string>
+
+    <!-- Analitik -->
+    <string name="analytics_subtitle">Ringkasan arus kas Anda</string>
+    <string name="cashflow_title">Pemasukan vs Pengeluaran</string>
+    <string name="cashflow_subtitle">Seluruh transaksi</string>
+    <string name="stats_title">Ringkasan Statistik</string>
+    <string name="savings_rate">Tingkat tabungan</string>
+    <string name="transaction_count">Total transaksi</string>
+    <string name="chart_empty">Belum ada data transaksi</string>
+
+    <!-- Anggaran -->
+    <string name="budget_subtitle">Pantau pengeluaran bulan ini dan jaga batas setiap kategori</string>
+    <string name="budget_summary">Terpakai %1$s dari %2$s</string>
+    <string name="add_budget">Tambah Anggaran</string>
+    <string name="budget_limit">Batas anggaran (Rp)</string>
+    <string name="budget_hint_category">Anggaran dihitung dari transaksi pengeluaran dengan kategori yang sama.</string>
+    <string name="empty_budgets">Belum ada anggaran.\nKetuk tombol + untuk membuat batas pengeluaran.</string>
+    <string name="budget_spent">Terpakai %1$s</string>
+    <string name="budget_remaining">Sisa %1$s</string>
+    <string name="budget_over">Melebihi %1$s</string>
+    <string name="budget_of">dari %1$s</string>
+    <string name="msg_budget_saved">Anggaran disimpan</string>
+    <string name="msg_budget_exists">Anggaran untuk kategori ini sudah ada</string>
+
+    <!-- Profil -->
+    <string name="about_app">Tentang Aplikasi</string>
+    <string name="app_version">Versi</string>
+    <string name="app_storage">Penyimpanan data</string>
+    <string name="app_storage_value">Lokal di perangkat</string>
+    <string name="app_platform">Platform</string>
+    <string name="app_platform_value">Android 6.0 ke atas</string>
+
+    <!-- Kategori -->
+    <string-array name="categories">
+        <item>Makanan</item>
+        <item>Kopi</item>
+        <item>Belanja</item>
+        <item>Transportasi</item>
+        <item>Hiburan</item>
+        <item>Langganan</item>
+        <item>Listrik</item>
+        <item>Buku</item>
+        <item>Kesehatan</item>
+        <item>Pendidikan</item>
+        <item>Gaji</item>
+        <item>Lainnya</item>
+    </string-array>
+
+</resources>

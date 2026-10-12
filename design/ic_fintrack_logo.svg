@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Shadow Effect -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(100, 75)" filter="url(#shadow)">
+    <!-- Shield / Perisai -->
+    <path d="M 120 40 C 170 35, 200 60, 220 80 C 220 180, 170 240, 120 260 C 70 240, 20 180, 20 80 C 40 60, 70 35, 120 40 Z" 
+          fill="none" stroke="#0B3C5D" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Coin / Koin Emas -->
+    <circle cx="110" cy="115" r="42" fill="#E6A100" />
+    <circle cx="110" cy="115" r="35" fill="none" stroke="#FFF" stroke-width="3" opacity="0.6"/>
+    <text x="110" y="130" font-family="Arial, sans-serif" font-weight="bold" font-size="42" fill="#FFF" text-anchor="middle">$</text>
+
+    <!-- Bar Chart / Grafik Batang -->
+    <rect x="70" y="145" width="18" height="45" rx="3" fill="#0B6691" />
+    <rect x="98" y="125" width="18" height="65" rx="3" fill="#00A88F" />
+    <rect x="126" y="105" width="18" height="85" rx="3" fill="#E6A100" />
+
+    <!-- Trend Arrow / Panah Hijau -->
+    <path d="M 50 170 L 95 130 L 125 150 L 205 75" 
+          fill="none" stroke="#25C997" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+    <polygon points="205,50 225,85 185,85" fill="#25C997" transform="rotate(35 205 75)" />
+  </g>
+
+  <!-- Teks FIN TRACK -->
+  <g transform="translate(380, 180)">
+    <text x="0" y="0" font-family="'Poppins', 'Montserrat', Arial, sans-serif" font-weight="900" font-size="72" fill="#0B3C5D" letter-spacing="2">FIN</text>
+    <text x="0" y="65" font-family="'Poppins', 'Montserrat', Arial, sans-serif" font-weight="900" font-size="72" fill="#00A88F" letter-spacing="2">TRACK</text>
+    <text x="2" y="105" font-family="'Poppins', 'Montserrat', Arial, sans-serif" font-weight="500" font-size="22" fill="#333333" letter-spacing="0.5">Aplikasi Pelacakan Keuangan</text>
+  </g>
+</svg>

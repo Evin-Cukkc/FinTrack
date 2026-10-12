@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- iOS-inspired light surfaces -->
+    <color name="bg">#F2F2F7</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F2F2F7</color>
+    <color name="outline">#E5E5EA</color>
+
+    <!-- Typography -->
+    <color name="text_primary">#1C1C1E</color>
+    <color name="text_secondary">#8E8E93</color>
+    <color name="text_tertiary">#AEAEB2</color>
+
+    <!-- iOS system blue and supporting accents -->
+    <color name="brand_indigo">#007AFF</color>
+    <color name="brand_indigo_dark">#5856D6</color>
+    <color name="brand_indigo_light">#0A84FF</color>
+    <color name="accent_green">#34C759</color>
+    <color name="on_accent">#FFFFFF</color>
+
+    <!-- Semantic transaction colors -->
+    <color name="income_green">#248A3D</color>
+    <color name="expense_red">#FF3B30</color>
+    <color name="bill_orange">#FF9500</color>
+
+    <!-- Component surfaces -->
+    <color name="pill_bg">#26FFFFFF</color>
+    <color name="nav_indicator">#1A007AFF</color>
+    <color name="icon_bg">#EAF2FF</color>
+</resources>
