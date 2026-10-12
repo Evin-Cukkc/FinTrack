@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- iOS-inspired light surfaces -->
-    <color name="bg">#F2F2F7</color>
-    <color name="surface">#FFFFFF</color>
-    <color name="surface_variant">#F2F2F7</color>
-    <color name="outline">#E5E5EA</color>
+    <!-- Dark glass background -->
+    <color name="bg">#0B1020</color>
+    <color name="surface">#172036</color>
+    <color name="surface_variant">#202B45</color>
+    <color name="outline">#35415E</color>
 
     <!-- Typography -->
-    <color name="text_primary">#1C1C1E</color>
-    <color name="text_secondary">#8E8E93</color>
-    <color name="text_tertiary">#AEAEB2</color>
+    <color name="text_primary">#F5F7FF</color>
+    <color name="text_secondary">#A6B0CA</color>
+    <color name="text_tertiary">#7885A5</color>
 
-    <!-- iOS system blue and supporting accents -->
-    <color name="brand_indigo">#007AFF</color>
-    <color name="brand_indigo_dark">#5856D6</color>
-    <color name="brand_indigo_light">#0A84FF</color>
-    <color name="accent_green">#34C759</color>
-    <color name="on_accent">#FFFFFF</color>
+    <!-- Brand -->
+    <color name="brand_indigo">#8B7CFF</color>
+    <color name="brand_indigo_dark">#6555DB</color>
+    <color name="brand_indigo_light">#B5ACFF</color>
+    <color name="accent_green">#42D6A4</color>
+    <color name="on_accent">#0B1020</color>
 
-    <!-- Semantic transaction colors -->
-    <color name="income_green">#248A3D</color>
-    <color name="expense_red">#FF3B30</color>
-    <color name="bill_orange">#FF9500</color>
+    <!-- Transactions -->
+    <color name="income_green">#42D6A4</color>
+    <color name="expense_red">#FF718B</color>
+    <color name="bill_orange">#FFBB70</color>
 
-    <!-- Component surfaces -->
+    <!-- Glass surfaces -->
     <color name="pill_bg">#26FFFFFF</color>
-    <color name="nav_indicator">#1A007AFF</color>
-    <color name="icon_bg">#EAF2FF</color>
+    <color name="nav_indicator">#408B7CFF</color>
+    <color name="icon_bg">#302B4778</color>
+    <color name="glass_stroke">#45FFFFFF</color>
+    <color name="glass_highlight">#1FFFFFFF</color>
+    <color name="cyan_accent">#60DDF5</color>
 </resources>
