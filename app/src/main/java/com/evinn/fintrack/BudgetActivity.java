@@ -21,7 +21,6 @@ import com.evinn.fintrack.model.Budget;
 import com.evinn.fintrack.model.Transaction;
 import com.evinn.fintrack.utils.Categories;
 import com.evinn.fintrack.utils.CurrencyUtils;
-import com.evinn.fintrack.utils.DateUtils;
 import com.evinn.fintrack.utils.NavigationHelper;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -110,7 +109,6 @@ public class BudgetActivity extends AppCompatActivity {
 
             for (Transaction transaction : transactions) {
                 if (transaction.getAmount() < 0
-                        && DateUtils.isInCurrentMonth(transaction.getDate())
                         && budgetKey.equals(Categories.canonical(transaction.getCategory()))) {
                     spent += Math.abs(transaction.getAmount());
                 }
@@ -186,7 +184,7 @@ public class BudgetActivity extends AppCompatActivity {
 
                     double budgetAmount;
                     try {
-                        budgetAmount = CurrencyUtils.parseAmount(amountText);
+                        budgetAmount = Double.parseDouble(amountText);
                     } catch (NumberFormatException e) {
                         Toast.makeText(this, R.string.msg_invalid_amount, Toast.LENGTH_SHORT).show();
                         return;

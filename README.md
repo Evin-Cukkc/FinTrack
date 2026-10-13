@@ -18,19 +18,3 @@ Build Command dan Output Directory dikosongkan. Lalu deploy ulang.
 
 Membuka link Vercel langsung menampilkan halaman unduh dan memulai unduhan `FinTrack.apk`.
 `/unduh` dialihkan ke `/`.
-
-## Catatan perubahan (perbaikan UI/UX dan input)
-- Input nominal menerima format umum Indonesia seperti `1.000.000`, serta format desimal seperti `1.250,50`.
-- Pengeluaran yang dipakai untuk progres anggaran dibatasi ke bulan berjalan.
-- Status transaksi sekarang dapat diedit dari dialog edit transaksi.
-- `web/FinTrack.apk` yang ada di arsip belum dibangun ulang dari perubahan ini. Setelah build APK baru, timpa file tersebut mengikuti langkah di atas sebelum deploy.
-
-## Tema visual
-
-Versi ini menggunakan tema terang modern yang terinspirasi dari visual iOS: latar abu-abu sangat muda, permukaan putih, aksen biru, kartu bersudut membulat, dan ikon navigasi dengan status aktif berwarna biru. Ini tetap aplikasi Android native berbasis Java/XML dan komponen Material 3; bukan aplikasi iOS.
-
-File utama untuk penyesuaian tampilan:
-- `app/src/main/res/values/colors.xml` — palet warna.
-- `app/src/main/res/values/themes.xml` — tema dan gaya komponen.
-- `app/src/main/res/layout/` — tata letak setiap halaman dan kartu.
-- `app/src/main/res/drawable/` — latar kartu, avatar, dan dekorasi.

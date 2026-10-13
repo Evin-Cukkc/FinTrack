@@ -62,7 +62,7 @@
     <string name="chart_empty">Belum ada data transaksi</string>
 
     <!-- Anggaran -->
-    <string name="budget_subtitle">Pantau pengeluaran bulan ini dan jaga batas setiap kategori</string>
+    <string name="budget_subtitle">Kelola batas pengeluaran Anda</string>
     <string name="budget_summary">Terpakai %1$s dari %2$s</string>
     <string name="add_budget">Tambah Anggaran</string>
     <string name="budget_limit">Batas anggaran (Rp)</string>

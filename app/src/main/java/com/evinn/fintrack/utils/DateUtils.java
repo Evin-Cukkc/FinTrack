@@ -3,7 +3,7 @@ package com.evinn.fintrack.utils;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-  
+
 public class DateUtils {
 
     private static final Locale ID = new Locale("id", "ID");

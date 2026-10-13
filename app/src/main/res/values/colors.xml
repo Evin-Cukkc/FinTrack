@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Dark glass background -->
-    <color name="bg">#0B1020</color>
-    <color name="surface">#172036</color>
-    <color name="surface_variant">#202B45</color>
-    <color name="outline">#35415E</color>
 
-    <!-- Typography -->
-    <color name="text_primary">#F5F7FF</color>
-    <color name="text_secondary">#A6B0CA</color>
-    <color name="text_tertiary">#7885A5</color>
+    <!-- Permukaan -->
+    <color name="bg">#0E1116</color>
+    <color name="surface">#161B22</color>
+    <color name="surface_variant">#1E252E</color>
+    <color name="outline">#2A323D</color>
+
+    <!-- Teks -->
+    <color name="text_primary">#F5F7FA</color>
+    <color name="text_secondary">#A0A9B8</color>
+    <color name="text_tertiary">#6B7686</color>
 
     <!-- Brand -->
-    <color name="brand_indigo">#8B7CFF</color>
-    <color name="brand_indigo_dark">#6555DB</color>
-    <color name="brand_indigo_light">#B5ACFF</color>
-    <color name="accent_green">#42D6A4</color>
-    <color name="on_accent">#0B1020</color>
+    <color name="brand_indigo">#3F51B5</color>
+    <color name="brand_indigo_dark">#283593</color>
+    <color name="brand_indigo_light">#8C9EFF</color>
+    <color name="accent_green">#00E676</color>
+    <color name="on_accent">#04140B</color>
 
-    <!-- Transactions -->
-    <color name="income_green">#42D6A4</color>
-    <color name="expense_red">#FF718B</color>
-    <color name="bill_orange">#FFBB70</color>
+    <!-- Semantik transaksi -->
+    <color name="income_green">#34D399</color>
+    <color name="expense_red">#FF6B6B</color>
+    <color name="bill_orange">#FBBF24</color>
 
-    <!-- Glass surfaces -->
-    <color name="pill_bg">#26FFFFFF</color>
-    <color name="nav_indicator">#408B7CFF</color>
-    <color name="icon_bg">#302B4778</color>
-    <color name="glass_stroke">#45FFFFFF</color>
-    <color name="glass_highlight">#1FFFFFFF</color>
-    <color name="cyan_accent">#60DDF5</color>
+    <!-- Lain-lain -->
+    <color name="pill_bg">#1FFFFFFF</color>
+    <color name="nav_indicator">#2600E676</color>
+    <color name="icon_bg">#161B22</color>
+
 </resources>

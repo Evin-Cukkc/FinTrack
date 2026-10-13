@@ -341,7 +341,7 @@ public class MainActivity extends AppCompatActivity {
 
                     double amount;
                     try {
-                        amount = CurrencyUtils.parseAmount(amountText);
+                        amount = Double.parseDouble(amountText);
                     } catch (NumberFormatException e) {
                         Toast.makeText(this, R.string.msg_invalid_amount, Toast.LENGTH_SHORT).show();
                         return;
@@ -385,26 +385,13 @@ public class MainActivity extends AppCompatActivity {
 
         EditText etEditTitle = dialogView.findViewById(R.id.etEditTitle);
         AutoCompleteTextView etEditCategory = dialogView.findViewById(R.id.etEditCategory);
-        AutoCompleteTextView etEditStatus = dialogView.findViewById(R.id.etEditStatus);
         EditText etEditAmount = dialogView.findViewById(R.id.etEditAmount);
 
         etEditCategory.setAdapter(new ArrayAdapter<>(
                 this, android.R.layout.simple_list_item_1, Categories.list(this)));
-        String[] statuses = {
-                getString(R.string.status_done),
-                getString(R.string.status_pending),
-                getString(R.string.status_paid)
-        };
-        etEditStatus.setAdapter(new ArrayAdapter<>(
-                this, android.R.layout.simple_list_item_1, statuses));
 
         etEditTitle.setText(transaction.getTitle());
         etEditCategory.setText(transaction.getCategory(), false);
-        String currentStatus = transaction.getStatus();
-        if (currentStatus == null || currentStatus.trim().isEmpty()) {
-            currentStatus = statuses[0];
-        }
-        etEditStatus.setText(currentStatus, false);
 
         // Tampilkan nominal tanpa tanda; tanda ditentukan oleh tipe transaksi
         double absAmount = Math.abs(transaction.getAmount());
@@ -423,17 +410,16 @@ public class MainActivity extends AppCompatActivity {
                 dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v -> {
                     String title = etEditTitle.getText().toString().trim();
                     String category = etEditCategory.getText().toString().trim();
-                    String status = etEditStatus.getText().toString().trim();
                     String amountText = etEditAmount.getText().toString().trim();
 
-                    if (title.isEmpty() || category.isEmpty() || status.isEmpty() || amountText.isEmpty()) {
+                    if (title.isEmpty() || category.isEmpty() || amountText.isEmpty()) {
                         Toast.makeText(this, R.string.msg_fill_all, Toast.LENGTH_SHORT).show();
                         return;
                     }
 
                     double amount;
                     try {
-                        amount = Math.abs(CurrencyUtils.parseAmount(amountText));
+                        amount = Math.abs(Double.parseDouble(amountText));
                     } catch (NumberFormatException e) {
                         Toast.makeText(this, R.string.msg_invalid_amount, Toast.LENGTH_SHORT).show();
                         return;
@@ -451,7 +437,6 @@ public class MainActivity extends AppCompatActivity {
 
                     transaction.setTitle(title);
                     transaction.setCategory(category);
-                    transaction.setStatus(status);
                     transaction.setAmount(amount);
                     transactionViewModel.update(transaction);
 
