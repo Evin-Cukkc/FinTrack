@@ -18,3 +18,15 @@ Build Command dan Output Directory dikosongkan. Lalu deploy ulang.
 
 Membuka link Vercel langsung menampilkan halaman unduh dan memulai unduhan `FinTrack.apk`.
 `/unduh` dialihkan ke `/`.
+
+
+## Catatan optimasi
+
+- Halaman web unduhan disederhanakan menjadi identitas FinTrack dan satu tombol **Install FinTrack**.
+- Tombol membuka unduhan APK secara langsung; unduhan otomatis berbasis `fetch(HEAD)` dihapus agar alur lebih konsisten dan tidak gagal hanya karena server tidak mengizinkan permintaan HEAD.
+- Pencarian transaksi dibuat konsisten lintas pengaturan bahasa perangkat dengan `Locale.ROOT`.
+- File APK yang sudah ada tetap disertakan di `web/FinTrack.apk`.
+
+## Verifikasi
+
+Pemeriksaan build Android belum dapat diselesaikan di lingkungan ini karena Gradle Wrapper perlu mengunduh distribusi Gradle dari internet, sementara akses jaringan tidak tersedia. Silakan buka proyek di Android Studio dan jalankan **Build > Make Project** untuk verifikasi build akhir.

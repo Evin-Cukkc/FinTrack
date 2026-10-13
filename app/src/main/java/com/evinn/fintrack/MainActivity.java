@@ -35,6 +35,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -227,7 +228,7 @@ public class MainActivity extends AppCompatActivity {
         List<Transaction> filteredList = new ArrayList<>();
 
         String keyword = etSearch != null
-                ? etSearch.getText().toString().toLowerCase().trim()
+                ? etSearch.getText().toString().toLowerCase(Locale.ROOT).trim()
                 : "";
 
         for (Transaction transaction : transactionList) {
@@ -258,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean contains(String text, String keyword) {
-        return text != null && text.toLowerCase().contains(keyword);
+        return text != null && text.toLowerCase(Locale.ROOT).contains(keyword);
     }
 
     private void updateFilterUI(TextView selectedFilter) {
